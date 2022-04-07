@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void multiarr(int  [10][10],[10][10],int,int,int);
+int main() {
+    int r,c,p;
+    int arr1[10][10],arr2[10][10];
+    printf("enter rows and column:");
+    scanf("%d%d",&r,&c);
+    for(int i=0; i<r; i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+    printf("enter the number of column of 2nd matrix:");
+    scanf("%d",&p);
+    for(int i=0; i<r; i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+            scanf("%d",&arr2[i][j]);
+        }
+    }
+    multiarr(arr1,arr2,r,c,p);
+    void multiarr(int arr1[10][10],arr2[10][10],int r,int c,int p)
+    {
+        int final[20][20],k;
+        for(int i=0; i<r; i++)
+        {
+            for(int j=0; j<c; j++)
+            {
+                multiarr[i][j]=arr1[i][k]*marr2[k][i];
+            }
+        }
+    }
+    printf("the resultant output");
+    for(int i=0; i<r; i++)
+    {
+        for(int j=0; j<c; j++)
+        {
+            printf("%d",final[i][j]);
+        }
+    }
+    
+    return 0;
+}
